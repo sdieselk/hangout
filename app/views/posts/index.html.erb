@@ -10,6 +10,20 @@
             <p class="post-text">
               <%= post.description %>
             </p>
+            <h2>コメント</h2>
+           <% post.comments.each do |comment| %>
+            <p class="post-text">
+              <%= comment.commentcontent %>
+            </p>
+           <% end %>
+           <%= form_tag("/comments") do %>
+             <div class="form-group">
+               <textarea name="commentcontent" class="form-control"></textarea>
+               <textarea name="post_id" class="hidden"><%= post.id %></textarea>
+               <textarea name="user_id" class="hidden"><%= post.user_id %></textarea>
+             </div><!--form-group-->
+             <button type="submit" class="btn btn-primary">コメント</button>
+           <% end %>
           </div>
         </div>
       </div>
