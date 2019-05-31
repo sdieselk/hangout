@@ -17,6 +17,24 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+    @post = Post.find_by(id: params[:id])
+  end
+
+  def show
+    @post = Post.find_by(id: params[:id])
+  end
+
+  def update
+    @post = Post.find_by(id: params[:id])
+    if @post.update(post_params)
+      redirect_to posts_path, success: '投稿の編集に成功しました'
+    else
+      flash.now[:danger] = "投稿の編集に失敗しました"
+      render :new
+    end
+  end
+
   private
   def post_params
     params.require(:post).permit(:description)

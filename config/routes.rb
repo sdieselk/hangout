@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   resources :users
   resources :posts
   resources :comments
+  get "posts/:id" => "posts#show"
+  get "posts/:id/edit" => "posts#edit"
+  post "posts/:id/update" => "posts#update"
 end
