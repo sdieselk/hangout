@@ -1,0 +1,7 @@
+<%= form_tag("/comments/#{@comment.id}/update") do %>
+  <div class="form-group">
+   <label for="exampleInputEmail1">編集する</label>
+   <textarea name="comment[commentcontent]" class="form-control"><%= @comment.commentcontent %></textarea>
+  </div><!--form-group-->
+  <button type="submit" class="btn btn-primary">保存</button>
+<% end %>

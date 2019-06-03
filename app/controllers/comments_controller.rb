@@ -12,6 +12,19 @@ class CommentsController < ApplicationController
     end
   end
 
+  def edit
+    @comment = Comment.find_by(id: params[:id])
+  end
+
+  def update
+    @comment = Comment.find_by(id: params[:id])
+    if @comment.update(comment_params)
+      redirect_to posts_path, success: 'コメントの編集に成功しました'
+    else
+      redirect_to posts_path, danger: "コメントの編集に失敗しました"
+    end
+  end
+
     private
   def comment_params
     params.require(:comment).permit(:commentcontent)

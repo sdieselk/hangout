@@ -19,7 +19,9 @@
             <h2>コメント</h2>
            <% post.comments.each do |comment| %>
             <p class="post-text">
+            <%= link_to edit_comment_path(id: comment.id), method: :get do %>
               <%= comment.commentcontent %>
+            <% end %>  
             </p>
            <% end %>
            <%= form_tag("/comments") do %>
