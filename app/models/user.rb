@@ -3,7 +3,7 @@ class User < ApplicationRecord
   validates :name, length: {maximum: 15}
   validates :email, presence: true
   validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
-  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,32}+\z/i}
+  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,32}+\z/i},on: :create
   has_secure_password
 
   has_many :posts
