@@ -1,6 +1,6 @@
 <%= form_tag("/posts/#{@post.id}/update") do %>
   <div class="form-group">
-   <label for="exampleInputEmail1">編集する</label>
+   <label for="exampleInputEmail1">投稿を編集する</label>
    <textarea name="post[description]" class="form-control"><%= @post.description %></textarea>
   </div><!--form-group-->
   <button type="submit" class="btn btn-primary">保存</button>
