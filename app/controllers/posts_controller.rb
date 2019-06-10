@@ -20,6 +20,9 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find_by(id: params[:id])
+    if current_user.id != @post.user_id
+      redirect_to posts_path, danger: "権限がありません"
+    end
   end
 
   def show

@@ -13,11 +13,13 @@
             <%= link_to post_path(id: post.id), method: :get do %>
              投稿詳細
             <% end %>
-            <%= link_to edit_post_path(id: post.id), method: :get do %>
-             投稿編集
-            <% end %>
-            <%= link_to post_path(id: post.id),  method: :delete do %>
-             投稿削除
+            <% if current_user.id == post.user_id %>
+              <%= link_to edit_post_path(id: post.id), method: :get do %>
+              投稿編集
+              <% end %>
+              <%= link_to post_path(id: post.id),  method: :delete do %>
+              投稿削除
+              <% end %>
             <% end %>
             <h2>コメント</h2>
            <% post.comments.each do |comment| %>
