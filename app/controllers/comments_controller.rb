@@ -14,6 +14,9 @@ class CommentsController < ApplicationController
 
   def edit
     @comment = Comment.find_by(id: params[:id])
+    if current_user.id != @comment.user_id
+      redirect_to posts_path, danger: "権限がありません"
+    end
   end
 
   def update
