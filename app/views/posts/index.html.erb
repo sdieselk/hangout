@@ -1,3 +1,6 @@
+<%= link_to posts_search_path, method: :get do %>
+ 検索
+<% end %>
 <div class="post-index-wrapper">
   <div class="container">
     <% @posts.each do |post| %>
@@ -8,7 +11,7 @@
               <%= post.user.name %>
             </h2>
             <p class="post-text">
-              <%= post.description %>
+              <%= simple_format (post.description) %>
             </p>
             <%= link_to post_path(id: post.id), method: :get do %>
              投稿詳細

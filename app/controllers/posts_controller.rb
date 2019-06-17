@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
   end
+
   def new
     @post = Post.new
   end
@@ -47,6 +48,10 @@ class PostsController < ApplicationController
       flash.now[:danger] = "投稿の削除に失敗しました"
       render :posts
     end
+  end
+
+  def search
+    @posts = Post.search(params[:search])
   end
 
   private
