@@ -1,4 +1,11 @@
-<h1>マイページ</h1>
-<%= link_to edit_user_path, method: :get do %>
-ユーザー編集
-<% end %>
+<div class="main-user-show">
+  <div class="container">
+    <div class="user">
+      <h2><%= @user.name %></h2>
+      <p><%= @user.email %></p>
+      <%= link_to edit_user_path, method: :get do %>
+      ユーザー編集
+      <% end %>
+    </div>
+  </div>
+</div>

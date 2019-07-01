@@ -5,45 +5,71 @@
     <title>HANGOUT</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
   </head>
   <body>
-    <div class="top-wrapper">
-      <div class="container">
-        <h1>HANG OUT</h1>
-        <h1>I hope that you can have a meaningful time.</h1>
-        <p>HANG OUTはいつでもどこでもだれとでもスポーツをシェアすることができるサービスです。</p>
-        <p>予定が合わず人数が集まらない時、急な休みでもアクティブに過ごしたい時にHANG OUTでイベントを開催することで人数を集めることができます。</p>
+    <div class="main">
+      <div class="top-wrapper">
+        <div class="container">
+          <h1>HANG OUT</h1>
+          <h1>I hope that you can have a meaningful time.</h1>
+          <p>HANG OUTはいつでもどこでもだれとでもスポーツをシェアすることができるサービスです。</p>
+          <p>予定が合わず人数が集まらない時、急な休みでもアクティブに過ごしたい時にHANG OUTでイベントを開催することで人数を集めることができます。</p>
+        </div>
       </div>
     </div>
     <div class="lesson-wrapper">
-      <div class="container">
-        <div class="heading">
-          <h2>List of Functions.</h2>
-        </div>
-        <div class="lessons">
-          <div class="lesson">
-            <div class="lesson-icon">
-              <p>イベント主催</p>
-            </div>
-            <p class="txt-contents">自分の都合がいい時にイベントを主催しましょう。たくさんの人に興味を持ってもらうように、イベントは詳細に記載しましょう。そして楽しいイベントにしましょう。</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <p>コメント</p>
-            </div>
-            <p class="txt-contents">気軽な雑談も増やしてコミュニケーション活性化。ちょっとした連絡、参加意思に便利なコメント機能。メンバー間の小さなコミュニケーションをたくさん生み出しましょう。</p>
-          </div>
-        </div>
+    <div class="heading">
+      <h1>List of Functions.</h1>
+    </div>
+    <div class="slider">
+      <!-- 1 -->
+      <div class="lesson">
+        <div class="lesson-icon">
+       <h2>イベント主催</h2>
+     </div>
+       <p class="txt-contents">自分の都合がいい時にイベントを主催しましょう。たくさんの人に興味を持ってもらうように、イベントは詳細に記載しましょう。そして楽しいイベントにしましょう。</p>
+      </div>
+      <!-- 2 -->
+      <div class="lesson">
+        <div class="lesson-icon">
+        <h2>コメント</h2>
+      </div>
+        <p class="txt-contents">気軽な雑談も増やしてコミュニケーション活性化。ちょっとした連絡、参加意思に便利なコメント機能。メンバー間の小さなコミュニケーションをたくさん生み出しましょう。</p>
+      </div>
+      <!-- 3 -->
+      <div class="lesson">
+        <div class="lesson-icon">
+        <h2>検索</h2>
+      </div>
+        <p class="txt-contents">興味があるキーワードを検索にかけて、自分が参加したいイベントを見つける時に是非使って欲しい機能です。</p>
       </div>
     </div>
-    <div class="message-wrapper">
-      <div class="container">
-        <div class="heading">
-          <h2>HANG OUTを使って有意義な時間を過ごしましょう</h2>
-          <h3>Let's enjoy it now.</h3>
+  </div>
+      <div class="message-wrapper">
+        <div class="container">
+          <div class="heading">
+            <h2>HANG OUTを使って有意義な時間を過ごしましょう</h2>
+            <h3>Let's enjoy it now.</h3>
+          </div>
+          <span class="btn message">会員登録する</span>
         </div>
-        <span class="btn message">会員登録する</span>
       </div>
-    </div>
+      <!-- jQueryの読み込み -->
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+      <!-- スライダー用プラ��インの読み込み -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+      <script>
+      (function($, window) {
+  $(function() {
+    // ここに処理を書きます
+    $('.slider').slick();
+  });
+})(jQuery, window);
+</script>
+
   </body>
 </html>

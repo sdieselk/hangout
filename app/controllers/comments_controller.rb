@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(
       commentcontent: params[:commentcontent],
       post_id: params[:post_id],
-      user_id: params[:user_id]
+      user_id: current_user.id
     )
     if  @comment.save
       redirect_to posts_path, success: "コメントに成功しました"

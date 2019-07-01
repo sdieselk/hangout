@@ -1,14 +1,18 @@
-<p>検索</p>
-<%= form_tag(posts_search_path,:method => 'get') do %>
-  <%= text_field_tag :search %>
-  <%= submit_tag 'Search', :name => nil %>
-<% end %>
-
-<ul>
-  <% @posts.each do |post| %>
-  <li>
-    <%= link_to post.description, post %>
-    <%= post.created_at %>
-  </li>
+<div class="search">
+  <p>検索</p>
+  <%= form_tag(posts_search_path,:method => 'get') do %>
+    <%= text_field_tag :search %>
+      <%= submit_tag 'Search', :name => nil %>
   <% end %>
-</ul>
+
+  <div class="search-each">
+    <ul>
+      <% @posts.each do |post| %>
+        <li>
+          <%= link_to post.description, post %>
+          <%= post.created_at %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

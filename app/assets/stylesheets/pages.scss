@@ -13,11 +13,14 @@ a {
   margin: 0 auto;
 }
 
+.main {
+  padding: 0 100px 0 100px;
+}
 .top-wrapper {
   padding: 180px 0 100px 0;
-  background-image: url();
-  background-size: cover;
-  color: black;
+  background-image: image-url("IMG_1586.jpg");
+  background-size: 1100px 500px;
+  color: white;
   text-align: center;
 }
 
@@ -40,14 +43,14 @@ a {
 }
 
 .lesson-wrapper {
-  height: 350px;
+  height: 400px;
   padding-bottom: 80px;
   background-color: #f7f7f7;
   text-align: center;
 }
 
 .heading {
-  padding-top: 60px;
+  padding-top: 30px;
   padding-bottom: 30px;
   color: #5f5d60;
 }
@@ -58,15 +61,14 @@ a {
 
 .lesson {
   float: left;
-  width: 50%;
+  text-align: center;
 }
 
 .lesson-icon {
   position: relative;
 }
 
-.lesson-icon p {
-  position: absolute;
+.lesson-icon h2 {
   top: 90px;
   width: 100%;
   color: black;
@@ -76,7 +78,7 @@ a {
   width: 60%;
   display: inline-block;
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 15px;
   color: #b3aeb5;
 }
 

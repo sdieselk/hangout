@@ -4,39 +4,67 @@
     <title>Hangout</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div class="header">
     <% flash.each do |key, value| %>
       <% flash.discard(key) %>
     <% end %>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
     <%= link_to root_path, method: :get do %>
     HANG OUT
     <% end %>
+  </li>
+    <li>
     <% if logged_in? %>
       <%= link_to user_path(id:current_user.id), method: :get do %>
       マイページ
       <% end %>
+    </li>
+    <li>
       <%= link_to posts_path, method: :get do %>
       投稿一覧
       <% end %>
+    </li>
+    <% if controller.controller_name == "posts" &&
+      controller.action_name == "index" %>
+    <li>
+      <%= link_to posts_search_path, method: :get do %>
+      検索
+      <% end %>
+    </li>
+    <% end %>
+    <li>
       <%= link_to new_post_path, method: :get do %>
       投稿
       <% end %>
+    </li>
+    <li>
       <%= link_to logout_path, method: :delete do %>
       ログアウト
       <% end %>
+    </li>
+    <li>
     <% else %>
       <%= link_to new_user_path, method: :get do %>
       Sing up
       <% end %>
+    </li>
+    <li>
       <%= link_to login_path, method: :get do %>
       Log in
       <% end %>
+    </li>
     <% end %>
+  </ul>
+  </div>
   <%= yield %>
 
     <script>
