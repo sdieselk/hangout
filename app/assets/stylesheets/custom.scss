@@ -15,6 +15,7 @@ h1, h2 {
   position: fixed;
   top: 0;
   z-index: 10;
+  padding-right: 10px;
 }
 
 .post-index-wrapper{
@@ -35,7 +36,7 @@ h1, h2 {
 
 .main-user-show{
   background-color: #f7f7f7;
-  height: 720px;
+  padding-bottom: 500px;
 }
 
 .search {
@@ -55,4 +56,50 @@ h1, h2 {
 
 .search-each ul {
   line-height: 40px;
+}
+.post-new-wrapper {
+  padding-bottom: 420px;
+}
+
+.posts-show {
+  padding-top: 100px;
+  padding-left: 100px;
+  background-color: #f7f7f7;
+  padding-bottom: 300px;
+}
+
+.posts-show-item {
+  font-size: 15px;
+  padding-left:20px;
+}
+
+.post-show-text {
+  font-size: 17px;
+  padding-left: 20px;
+}
+
+.posts-edit {
+  padding: 100px 200px 500px 100px;
+  font-size: 20px;
+  background-color: #f7f7f7;
+}
+
+.users-new-wrapper {
+  padding-bottom: 220px;
+  background-color: #f7f7f7;
+}
+
+.users-login-wrapper {
+  padding-bottom: 400px;
+  background-color: #f7f7f7;
+}
+
+.users-edit {
+  padding:100px 300px 400px 100px;
+  background-color: #f7f7f7;
+}
+
+.edit-password {
+  padding:100px 300px 400px 100px;
+  background-color: #f7f7f7;
 }

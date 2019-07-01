@@ -15,7 +15,7 @@
           <h1>HANG OUT</h1>
           <h1>I hope that you can have a meaningful time.</h1>
           <p>HANG OUTはいつでもどこでもだれとでもスポーツをシェアすることができるサービスです。</p>
-          <p>予定が合わず人数が集まらない時、急な休みでもアクティブに過ごしたい時にHANG OUTでイベントを開催することで人数を集めることができます。</p>
+          <p>スポーツをしたくても人数が集まらない時にHANG OUTでイベントを開催することで、自分がやりたい時にスポーツを楽しむができます。</p>
         </div>
       </div>
     </div>
@@ -27,49 +27,50 @@
       <!-- 1 -->
       <div class="lesson">
         <div class="lesson-icon">
-       <h2>イベント主催</h2>
-     </div>
-       <p class="txt-contents">自分の都合がいい時にイベントを主催しましょう。たくさんの人に興味を持ってもらうように、イベントは詳細に記載しましょう。そして楽しいイベントにしましょう。</p>
+          <h2>イベント主催</h2>
+        </div>
+        <p class="txt-contents">自分のやりたい時にイベントを主催しましょう。たくさんの人に興味を持ってもらうように、イベントは詳細に記載しましょう。そして楽しいイベントにしましょう。</p>
       </div>
       <!-- 2 -->
       <div class="lesson">
         <div class="lesson-icon">
         <h2>コメント</h2>
-      </div>
+        </div>
         <p class="txt-contents">気軽な雑談も増やしてコミュニケーション活性化。ちょっとした連絡、参加意思に便利なコメント機能。メンバー間の小さなコミュニケーションをたくさん生み出しましょう。</p>
       </div>
       <!-- 3 -->
       <div class="lesson">
         <div class="lesson-icon">
         <h2>検索</h2>
-      </div>
-        <p class="txt-contents">興味があるキーワードを検索にかけて、自分が参加したいイベントを見つける時に是非使って欲しい機能です。</p>
+        </div>
+        <p class="txt-contents">自分が参加したいイベントを見つける時に、興味があるキーワードを検索にかけて使ってみてください。</p>
       </div>
     </div>
   </div>
-      <div class="message-wrapper">
-        <div class="container">
-          <div class="heading">
-            <h2>HANG OUTを使って有意義な時間を過ごしましょう</h2>
-            <h3>Let's enjoy it now.</h3>
-          </div>
-          <span class="btn message">会員登録する</span>
+    <div class="message-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>HANG OUTを使って有意義な時間を過ごしましょう</h2>
+          <h3>Let's enjoy it now.</h3>
         </div>
+
+        <%= link_to '/users/new' do %><span class="btn message">Sing up</span><% end %>
       </div>
+    </div>
       <!-- jQueryの読み込み -->
-      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
       <!-- スライダー用プラ��インの読み込み -->
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
-      <script>
-      (function($, window) {
-  $(function() {
-    // ここに処理を書きます
-    $('.slider').slick();
-  });
-})(jQuery, window);
-</script>
+    <script>
+     (function($, window) {
+       $(function() {
+         // ここに処理を書きます
+         $('.slider').slick();
+       });
+     })(jQuery, window);
+    </script>
 
   </body>
 </html>

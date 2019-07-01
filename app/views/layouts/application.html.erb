@@ -18,54 +18,53 @@
     <% end %>
     <ul class="nav navbar-nav navbar-right">
       <li>
-    <%= link_to root_path, method: :get do %>
-    HANG OUT
+        <%= link_to root_path, method: :get do %>
+        HANG OUT
+        <% end %>
+      </li>
+      <li>
+        <% if logged_in? %>
+        <%= link_to user_path(id:current_user.id), method: :get do %>
+        マイページ
+        <% end %>
+      </li>
+      <li>
+        <%= link_to posts_path, method: :get do %>
+        投稿一覧
+        <% end %>
+      </li>
+      <% if controller.controller_name == "posts" && controller.action_name == "index" %>
+        <li>
+          <%= link_to posts_search_path, method: :get do %>
+          検索
+          <% end %>
+        </li>
+      <% end %>
+      <li>
+        <%= link_to new_post_path, method: :get do %>
+        投稿
+        <% end %>
+      </li>
+      <li>
+        <%= link_to logout_path, method: :delete do %>
+        ログアウト
+        <% end %>
+      </li>
+      <li>
+        <% else %>
+        <%= link_to new_user_path, method: :get do %>
+        Sing up
+        <% end %>
+      </li>
+      <li>
+        <%= link_to login_path, method: :get do %>
+        Log in
+        <% end %>
+      </li>
     <% end %>
-  </li>
-    <li>
-    <% if logged_in? %>
-      <%= link_to user_path(id:current_user.id), method: :get do %>
-      マイページ
-      <% end %>
-    </li>
-    <li>
-      <%= link_to posts_path, method: :get do %>
-      投稿一覧
-      <% end %>
-    </li>
-    <% if controller.controller_name == "posts" &&
-      controller.action_name == "index" %>
-    <li>
-      <%= link_to posts_search_path, method: :get do %>
-      検索
-      <% end %>
-    </li>
-    <% end %>
-    <li>
-      <%= link_to new_post_path, method: :get do %>
-      投稿
-      <% end %>
-    </li>
-    <li>
-      <%= link_to logout_path, method: :delete do %>
-      ログアウト
-      <% end %>
-    </li>
-    <li>
-    <% else %>
-      <%= link_to new_user_path, method: :get do %>
-      Sing up
-      <% end %>
-    </li>
-    <li>
-      <%= link_to login_path, method: :get do %>
-      Log in
-      <% end %>
-    </li>
-    <% end %>
-  </ul>
-  </div>
-  <%= yield %>
+    </ul>
+    </div>
+    <%= yield %>
 
     <script>
       $(function(){

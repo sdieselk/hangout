@@ -1,13 +1,16 @@
-<div class="posts-show-item">
-  <%= @post.description %>
-   <div class="post-time">
-    <%= @post.created_at %>
-   </div>
-</div>
+<div class="posts-show">
+  <h2>投稿詳細</h2>
+  <div class="posts-show-item">
+    <%= @post.description %>
+    <div class="post-time">
+      <%= @post.created_at %>
+    </div>
+  </div>
 
-<h2>コメント</h2>
-<% @post.comments.each do |comment| %>
-<p class="post-text">
-  <%= comment.commentcontent %>
-</p>
-<% end %>
+  <h2>コメント</h2>
+  <% @post.comments.each do |comment| %>
+    <p class="post-show-text">
+      <%= comment.commentcontent %>
+    </p>
+  <% end %>
+</div>
